@@ -1,13 +1,131 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Quicksand";
+  color: #333;
+  background-color: #caf0f8;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+  border-bottom: 1px solid #d1cbcb;
+}
+
+.logo h1 {
+  font-size: 28px;
+  letter-spacing: 3px;
+}
+
+.navbar-links a {
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.navbar-links a:hover {
+  /* transform: scale(0.97); */
+  color: red;
+}
+
+/* Banner section */
+
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 50px;
+  margin: 10px;
+  border: 1px solid #000;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(0.97);
+  transition: 0.3s ease;
+}
+
+/* Footer */
+.footer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.icons ul {
+  display: flex;
+  list-style: none;
+  margin-top: 90px;
+}
+
+.icons ul li {
+  margin: 0 20px 0 20px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.icons ul li:hover {
+  transform: scale(0.95);
+  transition: 0.3s ease;
+}
+
+.footer-wrapper p {
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+  padding-left: 2%;
+}
+
+/* Media Queries  */
+
+@media only screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .logo h1 {
+    font-size: 22px;
+  }
+
+  .navbar-links a {
+    margin: 10px;
+  }
+
+  .pic img {
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .pic img {
+    height: 400px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
 }
